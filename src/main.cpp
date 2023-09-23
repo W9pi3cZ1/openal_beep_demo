@@ -73,6 +73,7 @@ void Sleep(float sec){
 
 void Beep(float freq,float seconds){
     ALuint buf;
+    unsigned int offset = 32760;
     alGenBuffers(1, &buf);
     al_check_error();
 
@@ -81,9 +82,12 @@ void Beep(float freq,float seconds){
     short *samples;
     samples = new short[buf_size];
     float vol = 0.2;
+    float x=0.0f;
     for(int i=0; i<buf_size; ++i) {
-        // samples[i] = 32760 * sin( (2.f*float(M_PI)*freq)/sample_rate * i );
-        samples[i] = (32760 * SquareWaveAt(freq,i) * vol);
+        x=(1.f*float(M_PI)*freq)/sample_rate * i;
+        // samples[i] = offset * sin(x)*vol; // Sine Wave
+        // samples[i] = offset * (((asin(sin(x)))/0.5)/M_PI)*vol; // Triangular wave
+        samples[i] = (offset * SquareWaveAt(freq,i) * vol); // Square Wave
         vol/=1.00008;
     }
 
