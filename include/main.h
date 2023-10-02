@@ -1,13 +1,13 @@
 #include <AL/alut.h>
 
-struct bufSrc
+struct bufSrc // 用于存放src和buf，用于清理或再次播放
 {
     ALuint buf;
     ALuint src;
 };
 
-void Sleep(float sec);
+void Sleep(float seconds);
 void Beep(float freq,float seconds);
-struct bufSrc Beepf(float freq,float seconds,float sleepT);
-void cleanBufSrc(bufSrc bufSrc);
-void beepArr(float arr[][3],int arrLen);
+bufSrc Beepf(float freq,float seconds,float sleepTime);
+void CleanBufSrc(bufSrc bufSrc);
+void BeepByArr(float (*arr)[3],int arrLen);
