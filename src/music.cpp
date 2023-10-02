@@ -273,7 +273,7 @@ void play()
     cout << "Star Rail - HOYO-MIX" << endl
          << endl
          << "曲谱来自 : https://www.bilibili.com/video/BV1Zs4y1d74E/" << endl
-         << "代码 : XSlime" << endl;
+         << "代码 : XSlime" << endl << endl;
     BeepByArr(mg1, 4);
     BeepByArr(mg1, 4);
     BeepByArr(mg2, 9);

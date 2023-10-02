@@ -80,7 +80,7 @@ void GenArray(float freq,float seconds,float vol,short *samples){ //生成音频
 }
 
 void BeepByArr(float (*arr)[3],int arrLen){ // 播放一个二维数组
-    struct bufSrc bufSrc[arrLen];
+    struct WaveData bufSrc[arrLen];
     for(int i=0;i<arrLen;i++){
         bufSrc[i]=Beepf(arr[i][0],arr[i][1],arr[i][2]);
     }
@@ -89,7 +89,7 @@ void BeepByArr(float (*arr)[3],int arrLen){ // 播放一个二维数组
     }
 }
 
-bufSrc PlayArray(float seconds,short *samples){ // 播放带有音频信息的数组
+WaveData PlayArray(float seconds,short *samples){ // 播放带有音频信息的数组
     ALuint buf;
     alGenBuffers(1, &buf);
     // al_check_error();
@@ -103,11 +103,11 @@ bufSrc PlayArray(float seconds,short *samples){ // 播放带有音频信息的�
     alGenSources(1, &src);
     alSourcei(src, AL_BUFFER, buf);
     alSourcePlay(src);
-    bufSrc bufSrc = {buf,src};
+    WaveData bufSrc = {buf,src};
     return bufSrc;
 }
 
-void CleanBufSrc(bufSrc bufSrc){ // 清理残留的资源，因为一旦多了会报错
+void CleanBufSrc(WaveData bufSrc){ // 清理残留的资源，因为一旦多了会报错
     ALuint buf = bufSrc.buf;
     ALuint src = bufSrc.src;
     alSourceStopv(1,&src);
@@ -116,7 +116,7 @@ void CleanBufSrc(bufSrc bufSrc){ // 清理残留的资源，因为一旦多了�
     // al_check_error();
 }
 
-bufSrc Beepf(float freq,float seconds,float sleepTime){ // 播放三角函数的声音，但不会自动清理残留资源。
+WaveData Beepf(float freq,float seconds,float sleepTime){ // 播放三角函数的声音，但不会自动清理残留资源。
 
     size_t buf_size = seconds / 1000 * sample_rate;
 
@@ -126,7 +126,7 @@ bufSrc Beepf(float freq,float seconds,float sleepTime){ // 播放三角函数的
 
     cout << "Beep(" <<(int)freq << "," << (int)seconds << ")" << endl;
     
-    bufSrc bufSrc = PlayArray(seconds,samples);
+    WaveData bufSrc = PlayArray(seconds,samples);
     Sleep(sleepTime);
     
     delete[] samples;
