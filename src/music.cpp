@@ -1,4 +1,9 @@
-// #include <AL/alut.h>
+/*
+    Star Rail - HOYO-MIX
+
+    曲谱来自 : https://www.bilibili.com/video/BV1Zs4y1d74E/
+    代码 : XSlime
+*/
 #include <main.h>
 
 float qdo = 262;
@@ -39,10 +44,10 @@ float sfa1 = 1480;
 float sso1 = 1661;
 float sla1 = 1865;
 float pai = 600,
-    sypai=200,
-    ban = 300,
-    four = 200,
-    ei = 100;
+    sypai=pai/3,
+    ban = pai/2,
+    four = ban/2,
+    ei = four/2;
 float ting = 70;
 
 float mg1[4][3]={
@@ -269,7 +274,7 @@ float mg17[5][3]={
 };
 
 float mg18[2][3]={
-    {qso,pai,0},
+    {qso,pai*4,0},
     {so,pai*4,pai*4}
 };
 
