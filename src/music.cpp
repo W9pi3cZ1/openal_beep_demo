@@ -57,7 +57,8 @@ float mg1[4][3] = {
     {so, pai, pai},
     {so, pai, pai},
     {so, pai, pai},
-    {so, pai, pai}};
+    {so, pai, pai}
+};
 
 float mg2[9][3] = {
     {so, pai, 0},
@@ -80,7 +81,8 @@ float mg3[9][3] = {
     {so, pai, pai},
     {so, pai, 0},
     {re1, ban, ban},
-    {so, ban, ban}};
+    {so, ban, ban}
+};
 
 float mg4[10][3] = {
     {so, pai, 0},
@@ -92,7 +94,8 @@ float mg4[10][3] = {
     {so, pai, pai},
     {so, pai, 0},
     {re1, ban, ban},
-    {la1, ban, ban}};
+    {la1, ban, ban}
+};
 
 float mg5[8][3] = {
     {fa, pai, 0},
@@ -102,7 +105,8 @@ float mg5[8][3] = {
     {fa, pai * 2, 0},
     {so1, pai, pai},
     {re1, ban, ban},
-    {mi1, ban, ban}};
+    {mi1, ban, ban}
+};
 
 float mg6[18][3] = {
     {qdo, sypai, 0},
@@ -122,7 +126,8 @@ float mg6[18][3] = {
     {re, pai, pai},
     {do2, pai, 0},
     {re, pai, 0},
-    {do21, pai, pai}};
+    {do21, pai, pai}
+};
 
 float mg7[11][3] = {
     {qso, pai, 0},
@@ -135,7 +140,8 @@ float mg7[11][3] = {
     {re, pai, 0},
     {so, pai, pai},
     {re1, ban, ban},
-    {si, ban, ban}};
+    {si, ban, ban}
+};
 
 float mg8[9][3] = {
     {qfa, pai * 4, 0},
@@ -146,7 +152,8 @@ float mg8[9][3] = {
     {si, ban, ban},
     {so, ban, ban},
     {fa, ban, ban},
-    {mi, ban, ban}};
+    {mi, ban, ban}
+};
 
 float mg9[10][3] = {
     {qso, pai, 0},
@@ -158,7 +165,8 @@ float mg9[10][3] = {
     {fa, sypai, sypai},
     {mi, sypai, sypai},
     {re, sypai, sypai + pai},
-    {qso, pai, pai}};
+    {qso, pai, pai}
+};
 
 float mg10[11][3] = {
     {qfa, pai * 4, 0},
@@ -171,7 +179,8 @@ float mg10[11][3] = {
     {so1, sypai, sypai},
     {mi1, sypai, sypai},
     {re1, ban, ban},
-    {mi, ban, ban}};
+    {mi, ban, ban}
+};
 
 float mg11[8][3] = {
     {qso, pai * 4, 0},
@@ -181,7 +190,8 @@ float mg11[8][3] = {
     {re1, sypai, sypai},
     {mi1, sypai, sypai},
     {do21, sypai, sypai},
-    {re1, pai, pai}};
+    {re1, pai, pai}
+};
 
 float mg12[12][3] = {
     {qfa, pai * 4, 0},
@@ -255,18 +265,21 @@ float mg16[6][3] = {
     {do2, pai, pai},
     {do2, ban, ban},
     {re, ban, ban + pai},
-    {so, pai, pai}};
+    {so, pai, pai}
+};
 
 float mg17[5][3] = {
     {qso, pai * 4, 0},
     {so, pai, pai},
     {do2, ban, ban},
     {so, ban, ban},
-    {do21, pai * 2, pai * 2}};
+    {do21, pai * 2, pai * 2}
+};
 
 float mg18[2][3] = {
     {qso, pai * 4, 0},
-    {so, pai * 4, pai * 4}};
+    {so, pai * 4, pai * 4}
+};
 
 void play()
 {
